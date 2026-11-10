@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="pl">
+<style>
+hr {padding: 0px; margin: 0px;}
+pre {padding: 0px; margin: 0px;}
+</style>
+</head>
+
+<body bgcolor=#fff7ef>
+
+<h1>Zadanie (BRAK KODU ZADANIA) – Podróż do domu<h1>
+
+<h2>Opis zadania</h2> 
+<p>
+    Zbliża się koniec roku akademickiego, a Tomek - student I roku matematyki komputerowej na UJ - planuje swoją drogę powrotną do domu.
+    W tym celu zamierza wyznaczyć najoszczędniejszą możliwą trasę. Więdząc, że po drodze napotka miasta, chce posłużyć się programem,
+    który uwzględni wyższe spalanie paliwa w terenie zabudowanym oraz mniejsze poza nim, a następnie poda mu optymalną trasę i łączne zużycie paliwa.
+</p>
+<p>
+    Jeśli krawędź znajduje się między dwoma wierzchołkami miejskimi, to spalanie na tej drodze wynosi <tt>8l/100km</tt> (czyli <tt>80ml/km</tt>).
+    W innym przypadku jest to <tt>5l/100km</tt> (czyli <tt>50ml/km</tt>).
+</p>
+<p>
+    Wskazówka: dla poprawnego wyniku spalonego paliwa konieczne może być użycie typu <tt>long long</tt>.
+</p>
+
+<h2>Wejście</h2>
+<p>
+    Program ma wczytywać dane ze standardowego wejścia.
+    <ul>
+        <li>W pierwszej linii znajdują się dwie liczby naturalne <tt>2 &lt;= n &lt;= 10<sup>5</sup></tt> i <tt>1 &lt;= m &lt;= 3*10<sup>5</sup></tt>,
+            oznaczające kolejno liczbę wierzchołków i liczbę krawędzi.</li>
+        <li>W kolejnych n liniach znajdują się opisy wierzchołków, po jednym w każdej linii. Opis wierzchołka to wartość <tt>c</tt> typu <tt>bool</tt>,
+            oznaczająca, czy dany punkt to teren miejski, czy pozamiejski (<tt>1</tt> - miasto, <tt>0</tt> - teren pozamiejski).</li>
+        <li>W następnych m liniach znajdują się opisy krawędzi, po jednym w każdej linii. Opis jednej krawędzi to trzy liczby <tt>u</tt>, <tt>v</tt>,
+            <tt>d</tt> oddzielone spacją, gdzie pierwsze dwie to indeksy wierzchołków połączonych przez krawędź, a <tt>1 &lt;= d &lt;= 10<sup>4</sup></tt>
+            to długość drogi dwukierunkowej w km, opisywanej przez tę krawędź.</li>
+        <li>W ostatniej linii znajdują się dwie liczby oddzielone spacją. Oznaczają one kolejno indeksy początkowego i końcowego wierzchołka,
+            zgodnie z kolejnością wczytywania wierzchołków.</li>
+        <li>Wierzchołki są numerowane od <tt>0</tt> do <tt>n - 1</tt>, zgodnie z kolejnoscią ich występowania na wejściu.
+            Będzie to potrzebne przy wypisywaniu wyjścia.</li>
+    </ul>
+</p>
+
+<h2>Wyjście</h2>
+<p>
+    Program ma wypisać rozwiązanie na standardowe wyjście. Program ma wypisać dokładnie 2 linie:
+    <ul>
+        <li>W pierwszej linii ma znaleźć się liczba wskazująca dokładną ilość spalonego paliwa w litrach, zaokrągloną w dół do jedności.</li>
+        <li>W drugiej linii mają znaleźć się indeksy kolejno odwiedzonych wierzchołków na optymalnej trasie (łącznie z początkowym i końcowym wierzchołkiem),
+            oddzielone spacjami.</li>
+    </ul>
+    Jeśli trasa nie istnieje, to w obu liniach ma się pojawić pojedyncza liczba <tt>-1</tt>.
+</p>
+<h2>Dodatkowe ograniczenia i wymagania</h2>
+<p>
+    <ul>
+        <li>Pierwsza linia kodu źródłowego MUSI w komentarzu, w standardzie języka C++ (dwa znaki ukośnika) zawierać imię i nazwisko autora rozwiązania.</li>
+        <li>Program musi używać udostępnionego pliku nagłówkowego <tt>extra.h</tt> - kod znajduje sie poniżej. Program nie może włączać żadnego innego pliku nagłówkowego.</li>
+        <li>Próba obejścia powyższych wymagań skutkowac będzie wyzerowaniem punktów za to zadanie.</li>
+        <li>Program ma składać się z jednego pliku <tt>.cpp</tt>.</li>
+        <li><b>Plagiaty</b> będą rozpatrywane na koniec semestru.</li>
+    </ul>
+</p>
+<p>
+    Kod pliku <tt>extra.h</tt>:
+</p>
+<code>
+<pre>#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;queue&gt;
+#include &lt;vector&gt;</pre>
+</code>
+
+<h2>Przykładowe wejście</h2>
+<p>Dla danych:</p>
+<hr/>
+<pre><tt>5 5
+1
+0
+1
+1
+1
+0 2 10
+2 4 10
+0 1 12
+1 4 12
+0 3 50
+0 4
+</tt></pre>
+<hr/>
+<p>Poprawnym wyjściem jest:</p>
+<hr/>
+<pre><tt>1
+0 1 4
+</tt></pre>
+<hr/>
+
+</body>
+
+</html>
