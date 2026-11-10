@@ -1,4 +1,4 @@
-# Stworzone z wykorzystaniem SI
+# Program stworzony z wykorzystaniem SI
 import sys
 import random
 
